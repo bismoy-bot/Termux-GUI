@@ -1,14 +1,42 @@
 #!/data/data/com.termux/files/usr/bin/sh
 
+# Define colors
+RED='\033[1;31m'
+GREEN='\033[1;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[1;34m'
+CYAN='\033[1;36m'
+RESET='\033[0m'
+
+# Your custom banner
+echo -e "${BLUE}"
+cat << "EOF"
+  ____  _                            _     
+ / ___|| | ___  _   _  ___  ___ ___| |__  
+ \___ \| |/ _ \| | | |/ _ \/ __/ __| '_ \ 
+  ___) | | (_) | |_| |  __/\__ \__ \ | | |
+ |____/|_|\___/ \__, |\___||___/___/_| |_| 
+                |___/                     
+EOF
+
+# Colorized message
+echo -e "${YELLOW}Created by ${CYAN}Bismoy Ghosh${RESET}"
+echo -e "${GREEN}Welcome to Small and powerful World!${RESET}"
+echo -e "${RED}This script will Download whole mini computer in your Android!!!${RESET}"
+
+# Wait for 5 seconds
+sleep 5
+
 # Step 1: Install packages
 apt update -y && apt upgrade -y 
-
+echo -e "${YELLOW}Updateing and Upgrading.Please wait
+..${RESET}"
 apt install  x11-repo 
 apt install  xfce4 xfce4-goodies termux-x11-nightly code-oss firefox wireshark tigervnc aterm nano tur-repo pulseaudio proot-distro wget git python 
-
+echo -e "${YELLOW}Installing Dependencies....${RESET}"
 # Step 2: Start and stop VNC to generate initial files
- vncserver :1
- vncserver -kill :1
+vncserver :1
+vncserver -kill :1
 
 cat > ~/.vnc/xstartup << 'EOF'
 #!/data/data/com.termux/files/usr/bin/sh
