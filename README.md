@@ -66,7 +66,7 @@ chmod +x *
 ```
 5. Run the Script
 ```bash
-bash setup.sh
+bash install.sh
 ```
 
 Note: Set a password when prompted (min 6 characters).
