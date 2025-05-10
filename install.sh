@@ -35,8 +35,8 @@ sleep 5
 apt update -y && apt upgrade -y 
 echo -e "${YELLOW}Updateing and Upgrading.Please wait
 ..${RESET}"
-apt install  x11-repo 
-apt install  xfce4 xfce4-goodies termux-x11-nightly code-oss firefox wireshark tigervnc aterm nano tur-repo pulseaudio proot-distro wget git python 
+apt install  x11-repo -y
+apt install  xfce4 xfce4-goodies termux-x11-nightly code-oss firefox wireshark tigervnc aterm nano tur-repo pulseaudio proot-distro wget git python -y 
 echo -e "${YELLOW}Installing Dependencies....${RESET}"
 # Step 2: Start and stop VNC to generate initial files
 vncserver :1
